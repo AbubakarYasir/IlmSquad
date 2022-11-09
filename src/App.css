@@ -1,0 +1,131 @@
+:root {
+  --primary: #195274;
+  --secondary: #F9F9F9;
+  --white: #f3f3f3;
+  --button: #55a5d3;
+  --highlight_text: #76cdff;
+}
+body {
+    background: var(--secondary);
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  @keyframes verticalBreathing {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 40% 40%;
+    }
+    50% {
+      background-position: 80% 80%;
+    }
+    75% {
+      background-position: 20% 60%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .quiz-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--primary);
+    padding: 15px 45px;
+    height: 350px;
+    width: 550px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+  
+  p {
+    font-size: 30px;
+    margin: 0px;
+  }
+
+  .question-number{
+    font-size: 18px;
+    position: absolute;
+    right: 0%;
+    padding: 20px;
+    top: 0px;
+  }
+
+  .question-section {
+    color: var(--secondary);
+    text-align: center;
+  }
+  .answer-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    margin: 20px auto;
+    max-width: 300px;
+    row-gap: 30px;
+    padding: 20px 40px;
+    column-gap: 15px;
+  }
+  
+  button {
+    width: 100px;
+    font-size: 16px;
+    color: var(--primary);
+    background-color: var(--secondary);
+    border-radius: 3px;
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+  }
+
+  button:hover {
+    color: var(--secondary);
+    background-color: var(--button);
+  }
+  
+  .showScore-section {
+    font-size: 35px;
+    justify-self: center;
+    align-self: center;
+    color: var(--white);
+  }
+
+  .score {
+    font-weight: bold;
+    color: var(--highlight_text);
+  }
+
+  .questions-length {
+    font-weight: bold;
+    color: var(--highlight_text);
+  }
+  
+  @media all and (max-width: 700px) {
+    .quiz-div {
+      padding: 5px;
+      width: 90%;
+    }
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 26px;
+    }
+    button {
+      width: 100%;
+      min-width: 60px;
+    }
+  }
+  
